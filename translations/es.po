@@ -1,0 +1,16 @@
+msgid ""
+msgstr ""
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: POEditor.com\n"
+"Project-Id-Version: WS React-intl POEditor\n"
+"Language: es\n"
+
+#. [hello_world]
+#. defaultMessage is:
+#. Hello world!
+#: messages/src/App.json
+msgid "Hello world!"
+msgstr "¡Hola mundo!"
+

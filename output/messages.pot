@@ -1,0 +1,15 @@
+msgid ""
+msgstr ""
+"POT-Creation-Date: 2019-04-17T14:37:00.543Z\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"MIME-Version: 1.0\n"
+"X-Generator: react-intl-po\n"
+
+
+#: messages/src/App.json
+#. [hello_world]
+#. defaultMessage is:
+#. Hello world!
+msgid "Hello world!"
+msgstr ""

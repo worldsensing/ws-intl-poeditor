@@ -1,0 +1,40 @@
+{
+  "name": "ws-intl-poeditor",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-intl": "^2.8.0",
+    "react-scripts": "2.1.8",
+    "request": "^2.88.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "extract:messages": "NODE_ENV=production babel ./src >/dev/null",
+    "extract:pot": "mkdir -p output && react-intl-po json2pot 'messages/**/*.json' -o 'output/messages.pot'",
+    "extract:po": "react-intl-po po2json 'translations/*.po' -m 'messages/**/*.json' -o 'public/translations.json'",
+    "poeditor:update:terms": "node scripts/poeditor.update.terms.js",
+    "poeditor:download:translations": "mkdir -p translations && node scripts/poeditor.export.js",
+    "build": "yarn poeditor:download:translations && yarn extract:po && react-scripts build",
+    "translations:push:terms": "yarn extract:messages && yarn extract:pot && yarn poeditor:update:terms"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ],
+  "devDependencies": {
+    "@babel/cli": "^7.4.3",
+    "@babel/core": "^7.4.3",
+    "babel-preset-react-app": "^7.0.2",
+    "react-intl-po": "^2.2.2",
+    "babel-plugin-react-intl": "^3.0.1"
+  }
+}
